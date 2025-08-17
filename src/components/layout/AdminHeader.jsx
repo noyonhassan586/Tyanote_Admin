@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Bell, User, Sun, Moon } from 'lucide-react';
-import { useTheme } from '../../hooks/useTheme'; // Import the new hook
+import { useTheme } from '../../hooks/useTheme';
 
 const Tooltip = ({ text, children }) => (
     <div className="relative group flex items-center">
@@ -16,7 +16,6 @@ const Tooltip = ({ text, children }) => (
 
 const AdminHeader = ({ onSearchClick }) => {
     const [theme, setTheme] = useTheme();
-
     const iconButtonBaseClass = "p-3 rounded-full transition-all duration-200 hover:scale-110";
     const iconButtonInActiveClass = "bg-muted hover:bg-border";
 
@@ -78,12 +77,14 @@ const AdminHeader = ({ onSearchClick }) => {
                         </button>
                     </Tooltip>
                     <Tooltip text="Notifications">
-                        <Link to="#" className={`${iconButtonBaseClass} relative ${iconButtonInActiveClass}`}>
+                        {/* MODIFIED: Link to notifications page */}
+                        <Link to="/admin/notifications" className={`${iconButtonBaseClass} relative ${iconButtonInActiveClass}`}>
                             <Bell className="w-5 h-5" />
                         </Link>
                     </Tooltip>
                     <Tooltip text="Admin Profile">
-                        <Link to="#" className="p-1.5 rounded-full bg-muted hover:bg-border transition-all duration-200 hover:scale-110">
+                        {/* MODIFIED: Link to account page */}
+                        <Link to="/admin/account" className="p-1.5 rounded-full bg-muted hover:bg-border transition-all duration-200 hover:scale-110">
                             <span className="flex items-center justify-center w-8 h-8 rounded-full bg-muted-foreground text-background">
                                 <User className="w-5 h-5" />
                             </span>

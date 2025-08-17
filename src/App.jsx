@@ -16,6 +16,8 @@ import SupportDashboard from './features/admin/pages/SupportDashboard';
 import MarketingDashboard from './features/admin/pages/MarketingDashboard';
 import LeaderboardAdmin from './features/admin/pages/LeaderboardAdmin';
 import LearnAndWinAdmin from './features/admin/pages/LearnAndWinAdmin';
+import AdminAccountPage from './features/admin/pages/AdminAccountPage';
+import AdminNotificationsPage from './features/admin/pages/AdminNotificationsPage';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,8 @@ const router = createBrowserRouter([
       { path: 'marketing', element: <MarketingDashboard /> },
       { path: 'leaderboard', element: <LeaderboardAdmin /> },
       { path: 'learn-and-win', element: <LearnAndWinAdmin /> },
+      { path: 'account', element: <AdminAccountPage /> },
+      { path: 'notifications', element: <AdminNotificationsPage /> }
     ],
   },
   { path: '/', element: <Navigate to="/admin/security" replace /> },
