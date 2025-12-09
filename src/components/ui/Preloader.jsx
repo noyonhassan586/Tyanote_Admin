@@ -14,7 +14,7 @@ const Preloader = ({ message }) => (
         </div>
         <div className="absolute bottom-10 flex items-center gap-2">
             <img src={TyanemLogo} alt="Tyanem Logo" className="w-5 h-5" />
-            <p className="text-sm text-muted-foreground italic">Tyanote Admin Panel</p>
+            <p className="text-sm text-muted-foreground italic">Tyanote Admin Dashboard</p>
         </div>
     </motion.div>
 );
